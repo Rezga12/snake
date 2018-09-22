@@ -83,6 +83,7 @@ document.querySelector('body').addEventListener("keydown",function(e){
         game.play();
         game.started = true;
     } else{
+        let a =e.keyCode;
         switch(e.key){
 
             case 'ArrowLeft': game.snake.changeDirection(constant.LEFT);
@@ -119,8 +120,11 @@ class Menu{
         this.graphicMenu = document.getElementById('menu');
         this.graphicGame = document.getElementById('game');
 
+        this.backButton = document.getElementById('back');
+
         this.regularGameButton.onclick = () => {this.initGame(3.0,25);};
         this.superGameButton.onclick = () => {this.initGame(4,3);};
+        this.backButton.onclick = () => {location.reload()};
     }
 
     initGame(speed,size){

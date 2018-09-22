@@ -3,8 +3,6 @@ export class Point{
 
     constructor(x,y,id){
 
-
-
         this.object = document.createElement('div');
         this.object.classList.add('point');
         this.object.id = id;
