@@ -82,8 +82,9 @@ document.querySelector('body').addEventListener("keydown",function(e){
     if(game.started === false && game.initialized === true) {
         game.play();
         game.started = true;
+        menu.title.innerHTML = 'Snake xenzia boi';
     } else{
-        let a =e.keyCode;
+        
         switch(e.key){
 
             case 'ArrowLeft': game.snake.changeDirection(constant.LEFT);
@@ -114,6 +115,9 @@ class Menu{
     }
 
     addListeners(){
+
+        this.title = document.getElementById('title');
+
         this.regularGameButton = document.getElementById('regular');
         this.superGameButton = document.getElementById('super');
 
@@ -134,7 +138,13 @@ class Menu{
         this.game.init(speed,size);
         this.game.initialized = true;
 
-        this.fadeOut(this.graphicMenu,() => {this.fadeIn(this.graphicGame);});
+        this.fadeOut(this.graphicMenu,() => {
+            this.fadeIn(this.graphicGame,() => {
+                this.title.innerHTML = 'press any key';
+            });
+        });
+
+
     }
 
     fadeOut(element,callback = function(){}){
