@@ -1,0 +1,164 @@
+
+html{
+    --bg-color: #181712;
+    --pt-color: #B0ABA0;
+    --fd-color: linear-gradient(90deg,#FFEEEE,#DDEFBB);
+
+
+    --shadow-gray: 3px 3px 12px gray;
+    --shadow-black: 3px 3px 12px black;
+
+    background: var(--bg-color);
+    --point-size: 0;
+
+    font-family: digital-font, serif;
+}
+
+.container{
+
+    border: 1px solid var(--pt-color);
+    height: 75vh;
+    width: 75vh;
+    margin-top: 20vh;
+    margin-left: calc(50vw - 38vh);
+
+    position: relative;
+    box-shadow: var(--shadow-black);
+}
+
+.point{
+
+    background: linear-gradient(90deg,#eacda3,#d6ae7b);/*var(--pt-color);*/
+    width: var(--point-size);
+    height: var(--point-size);
+
+    border-radius: 15%;
+
+    position: absolute;
+
+    box-shadow: var(--shadow-black);
+
+}
+
+.food{
+
+    background: var(--fd-color);
+    border-radius: 50%;
+}
+
+@font-face{
+    font-family:digital-font;
+    src: url('./fonts/digital-7.ttf');
+}
+
+
+.score-board{
+
+
+
+    text-align: center;
+    color: var(--pt-color);
+
+    position: absolute;
+
+    top:18vh;
+    right: 10vw;
+}
+
+.score{
+    font-size: 5vw;
+    text-shadow: var(--shadow-black);
+}
+
+.label{
+    font-size: 75%;
+}
+
+.title{
+
+    position: absolute;
+    width: 50vw;
+    margin-left: 25vw;
+    text-align: center;
+    font-size: 4vw;
+    color: var(--pt-color);
+    top: 20px;
+
+    text-shadow: var(--shadow-black);
+
+}
+
+.game{
+
+    display:none;
+
+}
+
+
+.menu{
+
+
+    position: absolute;
+
+    width:50vw;
+    left:25vw;
+    color: var(--pt-color);
+    top:20vh;
+
+    font-size: 6vw;
+    text-align: center;
+}
+
+.regular{
+    cursor: pointer;
+    margin: 15px;
+    margin-bottom: 7vh;
+
+    text-shadow: var(--shadow-black);
+
+    transition: color,text-shadow .4s;
+}
+
+.regular:hover{
+    color: white;
+    text-shadow: var(--shadow-gray);
+}
+
+.super{
+    cursor: pointer;
+    margin: 15px;
+    margin-top: 7vh;
+    text-shadow: var(--shadow-black);
+
+    transition: color,text-shadow .4s;
+}
+
+.super:hover{
+    color: white;
+    text-shadow: var(--shadow-gray);
+
+}
+
+.back{
+    border: 1px solid white;
+    font-size: 4vw;
+    text-shadow: var(--shadow-black);
+
+    margin-top: 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
